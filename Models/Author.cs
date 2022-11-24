@@ -11,10 +11,14 @@ namespace Cadar_Iuliana_Lab2.Models
 
         [Display(Name = "LastName")]
         public string LastName { get; set; }
-
-        [Display(Name = "Author Name")]
-        public string FullName { get { return FirstName + " " + LastName; } }
-
+        [Display(Name = "Full Name")]
+        public string FullName
+        {
+            get
+            {
+                return FirstName + " " + LastName;
+            }
+        }
         public ICollection<Book>? Books { get; set; }
     }
 }
